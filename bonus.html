@@ -51,6 +51,30 @@
         <button type="button" class="header__menu-open" data-menu-open>
             <img src="./images/menu-bar.png" alt="menu button">
         </button>
+
+        <div class="mob-menu is-hidden" data-menu>
+            <button type="button" class="header__menu-close" data-menu-close>
+                <img src="./images/close-icon.png" alt="close">
+            </button>
+
+            <nav class="header__menu mob-menu__nav">
+                <ul>
+                    <li><a href="./bonus.html">Promotions</a></li>
+                    <li><a href="./app.html">Mobile</a></li>
+                    <li><a href="#">Tournaments</a></li>
+                    <li><a href="#">Live dealers</a></li>
+                </ul>
+            </nav>
+
+            <ul class="header__auth mob-menu__auth">
+                <li class="header__auth-item">
+                    <a href="#" class="button button-login header__button header__button-login">Log in</a>
+                </li>
+                <li class="header__auth-item">
+                    <a href="#" class="button button-register header__button header__button-register">Register now</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <main class="main">
@@ -67,7 +91,7 @@
             <div class="prime__wrap bonus-prime__content">
                 <p class="prime__nav"><a href="./index.html">Home</a> | <a>Bonuses</a></p>
 
-                <div class="title__wrap bonus-prime__title-wrap">
+                <div class="title-wrap bonus-prime__title-wrap">
                     <img src="./images/prime-content-left.png" alt="marker">
                     <h2 class="title prime__subtitle app-prime__subtitle">Live games</h2>
                     <img src="./images/prime-content-right.png" alt="marker">
@@ -82,7 +106,7 @@
         </section>
 
         <section class="content welcome__content">
-            <div class="title__wrap welcome__title-wrap">
+            <div class="title-wrap welcome__title-wrap">
                 <img src="./images/title-marker-left.png" alt="marker">
                 <h2 class="title welcome__title">Bizzo bookmaker company - online betting</h2>
                 <img src="./images/title-marker-right.png" alt="marker">
@@ -188,7 +212,7 @@
         </section>
 
         <section class="content payment__content">
-            <div class="title__wrap payment__title-wrap">
+            <div class="title-wrap payment__title-wrap">
                 <img src="./images/title-marker-left.png" alt="marker">
                 <h2 class="title payment__title">Deposit and withdrawal options</h2>
                 <img src="./images/title-marker-right.png" alt="marker">
@@ -217,59 +241,54 @@
         </section>
 
         <section class="content faq__content">
-            <div class="title__wrap payment__title-wrap">
+            <div class="title-wrap payment__title-wrap">
                 <img src="./images/title-marker-left.png" alt="marker">
                 <h2 class="title payment__title">FAQ</h2>
                 <img src="./images/title-marker-right.png" alt="marker">
             </div>
 
-            <div class="faq__list">
-                <div class="faq__item">
-                    <input type="checkbox" id="answer1" />
-                    <label for="answer1">Answer</label>
-                    <div class="faq__desc">
-                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                            Aenean
-                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh
-                            id
-                            elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
-                            velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+            <ul class="faq__list" itemscope itemtype="https://schema.org/FAQPage">
+                <li class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="faq-item__title js-button-accordion" itemprop="name">Answer</h3>
+                    <div class="faq-item__desc" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
+                            auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
+                            nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+                            mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                        </p>
                     </div>
-                </div>
+                </li>
 
-                <div class="faq__item">
-                    <input type="checkbox" id="answer2" />
-                    <label for="answer2">Answer</label>
-                    <div class="faq__desc">
-                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                            Aenean
-                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh
-                            id
-                            elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
-                            velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+                <li class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="faq-item__title js-button-accordion" itemprop="name">Answer</h3>
+                    <div class="faq-item__desc" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
+                            auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
+                            nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+                            mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                        </p>
                     </div>
-                </div>
+                </li>
 
-                <div class="faq__item">
-                    <input type="checkbox" id="answer3" />
-                    <label for="answer3">Answer</label>
-                    <div class="faq__desc">
-                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                            Aenean
-                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh
-                            id
-                            elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
-                            velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+                <li class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="faq-item__title js-button-accordion" itemprop="name">Answer</h3>
+                    <div class="faq-item__desc" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
+                            auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
+                            nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+                            mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                        </p>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </section>
     </main>
 
     <footer class="content footer__content">
-        <div>
-            <img src="./images/footer-image.png" alt="image">
-        </div>
+        <div class="footer__image"></div>
 
         <ul class="footer__payment">
             <li class="footer__payment-item">
@@ -301,7 +320,7 @@
             </li>
         </ul>
 
-        <img src="./images/divider-footer.png" alt="divider">
+        <div class="footer__divider"></div>
 
         <p class="footer__desc">This website is managed and operated by TechSolutions (CY) Group Limited (reg.number HE
             377018) with

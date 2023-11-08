@@ -51,6 +51,30 @@
         <button type="button" class="header__menu-open" data-menu-open>
             <img src="./images/menu-bar.png" alt="menu button">
         </button>
+
+        <div class="mob-menu is-hidden" data-menu>
+            <button type="button" class="header__menu-close" data-menu-close>
+                <img src="./images/close-icon.png" alt="close">
+            </button>
+
+            <nav class="header__menu mob-menu__nav">
+                <ul>
+                    <li><a href="./bonus.html">Promotions</a></li>
+                    <li><a href="./app.html">Mobile</a></li>
+                    <li><a href="#">Tournaments</a></li>
+                    <li><a href="#">Live dealers</a></li>
+                </ul>
+            </nav>
+
+            <ul class="header__auth mob-menu__auth">
+                <li class="header__auth-item">
+                    <a href="#" class="button button-login header__button header__button-login">Log in</a>
+                </li>
+                <li class="header__auth-item">
+                    <a href="#" class="button button-register header__button header__button-register">Register now</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <main class="main">
@@ -62,26 +86,30 @@
             <div class="image prime__image">
                 <img src="./images/prime/hof-banner-image-right.png" alt="background">
                 <img src="./images/prime/tournaments-image-left.png" alt="background">
-
             </div>
 
             <div class="prime__wrap prime__content">
-                <div class="prime__rating">
-                    <p class="prime__rating-scope"><span>96</span>/<span>100</span></p>
+                <div class="prime__rating" itemscope itemtype="https://schema.org/Game">
+                    <meta itemprop="name" content="https://yourwebsitename.com/" />
+                    <p class="prime__rating-scope" itemprop="aggregateRating" itemscope
+                        itemtype="https://schema.org/AggregateRating">
+                        <span itemprop="ratingValue">96</span>/<span itemprop="bestRating">100</span>
+                        <meta itemprop="reviewCount" content="100" />
+                    </p>
                     <div class="prime__rating-image">
-                        <img src="./images/trophy-cup-icon.png" alt="icon">
-                        <img src="./images/trophy-cup-icon.png" alt="icon">
-                        <img src="./images/trophy-cup-icon.png" alt="icon">
-                        <img src="./images/trophy-cup-icon.png" alt="icon">
-                        <img src="./images/trophy-cup-icon.png" alt="icon">
+                        <img src="./images/trophy-cup-icon.png" alt="icon" title="">
+                        <img src="./images/trophy-cup-icon.png" alt="icon" title="">
+                        <img src="./images/trophy-cup-icon.png" alt="icon" title="">
+                        <img src="./images/trophy-cup-icon.png" alt="icon" title="">
+                        <img src="./images/trophy-cup-icon.png" alt="icon" title="">
                     </div>
 
                     <p class="prime__rating-text">Overall Rating Among Players</p>
                 </div>
 
-                <div class="title__wrap prime__title-wrap">
+                <div class="title-wrap prime__title-wrap">
                     <img src="./images/prime-content-left.png" alt="marker">
-                    <h2 class="title prime__subtitle">Live games</h2>
+                    <p class="title prime__subtitle">Live games</p>
                     <img src="./images/prime-content-right.png" alt="marker">
                 </div>
 
@@ -92,7 +120,7 @@
         </section>
 
         <section class="content welcome__content">
-            <div class="title__wrap welcome__title-wrap">
+            <div class="title-wrap welcome__title-wrap">
                 <img src="./images/title-marker-left.png" alt="marker">
                 <h2 class="title welcome__title">Bizzo bookmaker company - online betting</h2>
                 <img src="./images/title-marker-right.png" alt="marker">
@@ -105,12 +133,12 @@
                 getting started.</p>
         </section>
 
-        <section class="content welcome__cover">
-            <div class="welcome__background">
+        <section class="content welcome">
+            <div class="background welcome__background">
                 <img src="./images/welcome/games-search-bg.png" alt="background">
             </div>
 
-            <div class="welcome__image">
+            <div class="image welcome__image">
                 <img src="./images/welcome/live-image-left.png" alt="girl">
                 <img src="./images/welcome/live-image-right.png" alt="man">
 
@@ -119,7 +147,7 @@
             <div class="welcome__wrap">
                 <h2 class="title general welcome__bonus">Luxury Table Battle</h2>
 
-                <div class="title__wrap welcome__text">
+                <div class="title-wrap welcome__text">
                     <img src="./images/welcome/welcome-marker-left.png" alt="marker">
                     <p>Prize pool</p>
                     <img src="./images/welcome/welcome-marker-right.png" alt="marker">
@@ -131,7 +159,7 @@
         </section>
 
         <section class="content how-start__content">
-            <div class="title__wrap how-start__title-wrap">
+            <div class="title-wrap how-start__title-wrap">
                 <img src="./images/title-marker-left.png" alt="marker">
                 <h2 class="title how-start__title">Easy and simple start at online betting</h2>
                 <img src="./images/title-marker-right.png" alt="marker">
@@ -153,7 +181,7 @@
                 <li>Log in to your profile and make the first deposit to start betting.</li>
             </ol>
 
-            <div class="title__wrap how-start__title-wrap">
+            <div class="title-wrap how-start__title-wrap">
                 <img src="./images/title-marker-left.png" alt="marker">
                 <h2 class="title how-start__title">Bizzo advantages</h2>
                 <img src="./images/title-marker-right.png" alt="marker">
@@ -171,7 +199,7 @@
         </section>
 
         <section class="content facts__content">
-            <div class="title__wrap facts__title-wrap">
+            <div class="title-wrap facts__title-wrap">
                 <img src="./images/title-marker-left.png" alt="marker">
                 <h2 class="title facts__title">Bizzo casino quick facts</h2>
                 <img src="./images/title-marker-right.png" alt="marker">
@@ -179,75 +207,76 @@
 
             <ul class="facts__list">
                 <li class="facts__item">
-                    <p>
+                    <div>
                         <img src="./images/facts/online-casino-icon.png" alt="icon">
                         <span>Website</span>
-                    </p>
-                    <p><a href="#">https://bizzocasino.com/</a></p>
+                    </div>
+                    <div><a href="#">https://bizzocasino.com/</a></div>
                 </li>
                 <li class="facts__item">
-                    <p>
+                    <div>
                         <img src="./images/facts/billiard-ball-icon.png" alt="icon">
                         <span>Game Types:</span>
-                    </p>
-                    <p>Sportsbook, Casino, Live Games, Live Casino</p>
+                    </div>
+                    <div>Sportsbook, Casino, Live Games, Live Casino</div>
                 </li>
                 <li class="facts__item">
-                    <p>
+                    <div>
                         <img src="./images/facts/credit-card-icon.png" alt="icon">
                         <span>Deposit methods:</span>
-                    </p>
-                    <p>Visa, Masterscard, Maestro, PayPal, Skrill, Neteller, Trustly, Bitcoin, Bank Transfer, Entropay,
-                        ecoPayz, Neosurf</p>
+                    </div>
+                    <div>Visa, Masterscard, Maestro, PayPal, Skrill, Neteller, Trustly, Bitcoin, Bank Transfer,
+                        Entropay,
+                        ecoPayz, Neosurf</div>
                 </li>
                 <li class="facts__item">
-                    <p>
+                    <div>
                         <img src="./images/facts/lemon-icon.png" alt="icon">
                         <span>Withdrawal methods:</span>
-                    </p>
-                    <p>Visa, Mastercard, Maestro, PayPal, Skrill, Neteller, Trustly, Bitcoin, Bank Transfer, Entropay,
-                        ecoPayz, Neosurf</p>
+                    </div>
+                    <div>Visa, Mastercard, Maestro, PayPal, Skrill, Neteller, Trustly, Bitcoin, Bank Transfer, Entropay,
+                        ecoPayz, Neosurf</div>
                 </li>
                 <li class="facts__item">
-                    <p>
+                    <div>
                         <img src="./images/facts/dices-icon.png" alt="icon">
                         <span>Betting functions:</span>
-                    </p>
-                    <p>Live betting, cash out</p>
+                    </div>
+                    <div>Live betting, cash out</div>
                 </li>
                 <li class="facts__item">
-                    <p>
+                    <div>
                         <img src="./images/facts/domino-icon.png" alt="icon">
                         <span>Casino game types:</span>
-                    </p>
-                    <p>Slots, table games</p>
+                    </div>
+                    <div>Slots, table games</div>
                 </li>
                 <li class="facts__item">
-                    <p>
+                    <div>
                         <img src="./images/facts/croupier-icon.png" alt="icon">
                         <span>Casino provider:</span>
-                    </p>
-                    <p>1X2 Network, Amatic Industries, Apollo Games, Asia Gaming and more</p>
+                    </div>
+                    <div>1X2 Network, Amatic Industries, Apollo Games, Asia Gaming and more</div>
                 </li>
                 <li class="facts__item">
-                    <p>
+                    <div>
                         <img src="./images/facts/poker-cards-icon.png" alt="icon">
                         <span>Apps:</span>
-                    </p>
-                    <p>iPhone, Android</p>
+                    </div>
+                    <div>iPhone, Android</div>
                 </li>
                 <li class="facts__item">
-                    <p>
+                    <div>
                         <img src="./images/facts/glasses-icon.png" alt="icon">
                         <span>Founded Year:</span>
-                    </p>
-                    <p>2017</p>
+                    </div>
+                    <div>2017</div>
                 </li>
             </ul>
         </section>
 
         <section class="content payment__content">
-            <div class="title__wrap payment__title-wrap">
+            <div class="title-wrap payment__title-wrap">
                 <img src="./images/title-marker-left.png" alt="marker">
                 <h2 class="title payment__title">Deposit and withdrawal options</h2>
                 <img src="./images/title-marker-right.png" alt="marker">
@@ -276,59 +305,54 @@
         </section>
 
         <section class="content faq__content">
-            <div class="title__wrap payment__title-wrap">
+            <div class="title-wrap payment__title-wrap">
                 <img src="./images/title-marker-left.png" alt="marker">
                 <h2 class="title payment__title">FAQ</h2>
                 <img src="./images/title-marker-right.png" alt="marker">
             </div>
 
-            <div class="faq__list">
-                <div class="faq__item">
-                    <input type="checkbox" id="answer1" />
-                    <label for="answer1">Answer</label>
-                    <div class="faq__desc">
-                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                            Aenean
-                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh
-                            id
-                            elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
-                            velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+            <ul class="faq__list" itemscope itemtype="https://schema.org/FAQPage">
+                <li class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="faq-item__title js-button-accordion" itemprop="name">Answer</h3>
+                    <div class="faq-item__desc" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
+                            auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
+                            nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+                            mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                        </p>
                     </div>
-                </div>
+                </li>
 
-                <div class="faq__item">
-                    <input type="checkbox" id="answer2" />
-                    <label for="answer2">Answer</label>
-                    <div class="faq__desc">
-                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                            Aenean
-                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh
-                            id
-                            elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
-                            velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+                <li class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="faq-item__title js-button-accordion" itemprop="name">Answer</h3>
+                    <div class="faq-item__desc" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
+                            auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
+                            nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+                            mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                        </p>
                     </div>
-                </div>
+                </li>
 
-                <div class="faq__item">
-                    <input type="checkbox" id="answer3" />
-                    <label for="answer3">Answer</label>
-                    <div class="faq__desc">
-                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                            Aenean
-                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh
-                            id
-                            elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
-                            velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+                <li class="faq__item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="faq-item__title js-button-accordion" itemprop="name">Answer</h3>
+                    <div class="faq-item__desc" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <p itemprop="text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
+                            auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
+                            nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+                            mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                        </p>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </section>
     </main>
 
     <footer class="content footer__content">
-        <div>
-            <img src="./images/footer-image.png" alt="image">
-        </div>
+        <div class="footer__image"></div>
 
         <ul class="footer__payment">
             <li class="footer__payment-item">
@@ -360,7 +384,7 @@
             </li>
         </ul>
 
-        <img src="./images/divider-footer.png" alt="divider">
+        <div class="footer__divider"></div>
 
         <p class="footer__desc">This website is managed and operated by TechSolutions (CY) Group Limited (reg.number HE
             377018) with
