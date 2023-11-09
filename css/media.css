@@ -156,6 +156,10 @@
         display: none;
     }
 
+    .header__auth.mob-menu__auth {
+        display: flex;
+    }
+
     /* prime */
     .prime {
         padding: 68px 32px 68px 32px;
